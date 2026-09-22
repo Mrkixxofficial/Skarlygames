@@ -717,6 +717,47 @@ footer span{
   .zone-info{
     width:190px;
   }
+}.powered{
+  color:#777;
+  font-size:11px;
+  font-weight:700;
+}
+
+.powered a{
+  color:#ff1e1e;
+  text-decoration:none;
+  font-family:"Press Start 2P", monospace;
+  font-size:12px;
+  letter-spacing:1px;
+  text-shadow:2px 2px 0 #450000;
+  transition:.25s;
+}
+
+.powered a:hover{
+  color:#ff4b4b;
+  text-shadow:
+    0 0 8px #ff1e1e,
+    0 0 18px #ff1e1e;
+}.powered-top{
+  color:#777;
+  text-decoration:none;
+  font-family:Inter,sans-serif;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  margin-top:2px;
+}
+
+.powered-top b{
+  color:#7CFF6B;
+  font-family:"Press Start 2P", monospace;
+  font-size:7px;
+  letter-spacing:.5px;
+  text-shadow:1px 1px 0 #350000;
+}
+
+.powered-top:hover b{
+  color:#A4FF98;
 }
 </style>
 </head>
@@ -726,8 +767,17 @@ footer span{
 <!-- NAV -->
 <nav>
 
+  <div class="brand">
   <div class="logo">
     ONCHAIN <span>HEROES</span>
+  </div>
+
+  <a class="powered-top"
+     href="https://x.com/Vipinyt_"
+     target="_blank"
+     rel="noopener">
+    POWERED BY <b>MRKIXX ↗</b>
+  </a>
   </div>
 
   <div class="navlinks">
@@ -1113,6 +1163,13 @@ footer span{
     ONCHAIN HEROES // WORLD'S EVE
   </div>
 
+  <div class="powered">
+    POWERED BY
+    <a href="https://x.com/Vipinyt_" target="_blank" rel="noopener">
+      MRKIXX ↗
+    </a>
+  </div>
+
   <div>
     <span>COMMUNITY CONCEPT</span> • NOT OFFICIAL
   </div>
@@ -1216,40 +1273,4 @@ document.addEventListener("mousemove",function(e){
 
 /* CARD TILT */
 
-document.querySelectorAll(".card,.hero-card,.project")
-.forEach(function(card){
-
-  card.addEventListener("mousemove",function(e){
-
-    const rect =
-      card.getBoundingClientRect();
-
-    const x =
-      e.clientX-rect.left;
-
-    const y =
-      e.clientY-rect.top;
-
-    const rotateY =
-      ((x/rect.width)-.5)*5;
-
-    const rotateX =
-      ((y/rect.height)-.5)*-5;
-
-    card.style.transform =
-      `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-
-  });
-
-  card.addEventListener("mouseleave",function(){
-
-    card.style.transform="";
-
-  });
-
-});
-
-</script>
-
-</body>
-</html>
+docum
